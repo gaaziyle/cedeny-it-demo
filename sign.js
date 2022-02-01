@@ -46,24 +46,25 @@ function formSignUp(e) {
     
     if (nameInput.length < 4) {
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Lütfen adı alanını 3 karakterden büyük giriniz ');
+        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Please enter name greater than 3 characters');
     }
 
     else if (passwordInput.value !== rePasswordInput.value) {
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Şifreler aynı olmalıdır. ');
+        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon>Passwords must match.');
 
     }
-    else if (passwordInput.value == '') {
+    else if (passwordInput.value == '' || nameInput.value == '' || emailInput.value == '' || rePasswordInput.value == '') {
 
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Lütfen tüm boşlukları doldurun ');
+        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Please fill in all the blanks');
 
     }
+    
 
     else if (passwordInput.value.length < 6) {
 
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Şifre 6 karekter veya daha büyük olmalıdır. ');
+        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Password must be 6 characters or greater');
 
     }
     else {
@@ -71,7 +72,7 @@ function formSignUp(e) {
         localStorage.setItem('email', emailInput.value);
         localStorage.setItem('password', passwordInput.value);
         localStorage.setItem('re-password', rePasswordInput.value);
-        showAlert("success","Başarıyla kayıt olundu <ion-icon name='checkmark-outline' id='tick'></ion-icon>, lütfen giriş yapınız");
+        showAlert("success","<ion-icon name='checkmark-outline' id='tick'></ion-icon>&nbsp; Successfully registered, please login");
         setTimeout(() => {
             signin.style.display = "none";
             login.style.display = "grid";
@@ -146,14 +147,22 @@ function loginPage(e) {
     e.preventDefault();
 };
 
-// buttonLoginPage.addEventListener('click',loginS)
-// function loginS(e) {// kontrolleri yapman lazım
+buttonLoginPage.addEventListener('click',loginS)
+function loginS(e) {// kontrolleri yapman lazım
     
-
+    if(emailL.value != storageEmail.value){
+        showAlert("warning","Böyle bir hesap bulunamadı")
+    }
+    else if(loginPagePassword.value != storagePassword.value){
+        showAlert("warning","Şifre yanlış olabilir")
+    }
+    else{
+        window.location.reload();
+    }
     
-//     e.preventDefault();
+    e.preventDefault();
 
-// };
+};
 orSignUp.addEventListener('click',backToSigninPage)
 function backToSigninPage(e) {
     setTimeout(() => {

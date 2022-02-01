@@ -36,16 +36,16 @@ body {
 
 }
 .alert-success {
-    background: rgb(38, 187, 83, 0.562);
+    background: rgb(38, 187, 83);
     color: white;
     
 }
 .alert-warning {
-    background: rgba(196, 43, 16, 0.562);
+    background: rgba(196, 43, 16);
     color : rgb(255, 255, 255);
 }
 .alert-noti {
-    background: rgb(39, 166, 250, 0.562) ;
+    background: rgb(39, 166, 250) ;
     color : #ffffff;
     
     
@@ -425,7 +425,7 @@ input:focus {
 .edit-pencil {
     cursor: pointer;
     border: 2px solid white;
-    border-radius: 5px;    
+    border-radius: 3px;    
     padding: 7px 5px;
     margin-left: 10px;
     background: white;
@@ -527,7 +527,7 @@ input:focus {
     border: 2px solid red;
 }
 #clearBtn {
-    width: 12%; 
+    width: auto; 
     padding: 15px 10px;  
     background: transparent;
     border: 2px solid red;

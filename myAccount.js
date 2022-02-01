@@ -7,6 +7,8 @@ const editEmailBtn = document.getElementById('edit-email-btn');
 const crossInputName = document.getElementById('cross-name-input');
 const crossInputEmail = document.getElementById('cross-email-input');
 const clearBtnAcc = document.getElementById('clearBtn');
+const signupBtnAcc = document.getElementById('signup');
+
 
 
 // Storage
@@ -19,10 +21,13 @@ const userStorageRePassword = localStorage.getItem('re-password');
 function change() {
     userName.innerHTML = ("Name : " + userStorageName + "&nbsp;<button class='edit-pencil' onclick='editName()'>Edit Name</button>");
     userEmail.innerHTML = ("Email : " + userStorageEmail + "&nbsp;<button class='edit-pencil' onclick='editEmail()'>Edit Email</button>");
-    
+    signupBtnAcc.innerHTML = storageName;
 }
 change();
-
+function clearBtnText(){
+    clearBtnAcc.innerHTML = ("Delete"+ " " + storageEmail)
+}
+clearBtnText(); 
 function editName(e) {
     setTimeout(() => {
         editNameInput.style.display = "block";
@@ -99,11 +104,11 @@ function closeEmailInput() {
 editNameBtn.addEventListener('click',updateUserName);
 
 function updateUserName() {
-    showAlert("noti","İsim güncelleniyor, lütfen bekleyin...")
+    showAlert("noti","Updating name, please wait...")
     
     setTimeout(() => {
     localStorage.setItem('name', editNameInput.value);
-    showAlert("success","İsim başarıyla güncellendi")
+    showAlert("success","Name updated successfully")
         
     }, 3000);    
     setTimeout(() => {
@@ -117,11 +122,11 @@ function updateUserName() {
 editEmailBtn.addEventListener('click',updateUserEmail);
 
 function updateUserEmail() {
-    showAlert("noti","Email güncelleniyor, lütfen bekleyin...")
+    showAlert("noti","Updating email, please wait...")
     
     setTimeout(() => {
     localStorage.setItem('email', editEmailInput.value);
-    showAlert("success","Email başarıyla güncellendi")
+    showAlert("success","Email successfully updated")
         
     }, 3000);    
     setTimeout(() => {
@@ -147,10 +152,10 @@ clearBtnAcc.addEventListener('click',clearStorageAcc)
 
 function clearStorageAcc(e) {
     localStorage.clear();
-    showAlert("noti","Hesap siliniyor, lütfen bekleyin...")
+    showAlert("noti", storageEmail + " "+"deleting, please wait...")
 
     setTimeout(() => {
-        showAlert("success","Hesap silindi <ion-icon name='checkmark-outline'></ion-icon>")
+        showAlert("success", storageEmail + " " + "deleted <ion-icon name='checkmark-outline'></ion-icon>")
 
     }, 3000);
     setTimeout(() => {

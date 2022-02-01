@@ -37,16 +37,16 @@ body {
 
 }
 .alert-success {
-    background: rgb(38, 187, 83, 0.562);
+    background: rgb(38, 187, 83);
     color: white;
     
 }
 .alert-warning {
-    background: rgba(196, 43, 16, 0.562);
+    background: rgba(196, 43, 16);
     color : rgb(255, 255, 255);
 }
 .alert-noti {
-    background: rgb(39, 166, 250, 0.562) ;
+    background: rgb(39, 166, 250) ;
     color : #ffffff;
     
     
@@ -247,7 +247,7 @@ li a:hover::before {
 }
 #look-password {
     position: absolute;
-    color: black;
+    color: white;
     margin-left: 29%;
     margin-top: 1.2%;
     font-size: 25px;
@@ -260,7 +260,7 @@ li a:hover::before {
     cursor:pointer;
 
     position: absolute;
-    color: black;
+    color: white;
     margin-left: 29%;
     margin-top: 1.2%;
     font-size: 25px;
@@ -270,7 +270,7 @@ li a:hover::before {
 }
 #login-page-look-password {
     position: absolute;
-    color: black;
+    color: white;
     margin-left: 29%;
     margin-top: 1.2%;
     font-size: 25px;
@@ -283,7 +283,7 @@ li a:hover::before {
     cursor:pointer;
 
     position: absolute;
-    color: black;
+    color: white;
     margin-left: 29%;
     margin-top: 1.2%;
     font-size: 25px;
