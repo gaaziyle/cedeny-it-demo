@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/cedeny-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<title>Cedeny</title>
+</head>
+<body>
+    <div id="abc"></div>
+    <header id="header">
+        <nav class="nav" id="nav">
+            <a id="redirect-home" href="index.html"><div class="header-div">
+        <img id="cedeny_logo" src="./images/cedeny-header.png" alt="cedeny_logo">
+            <h2 class="cedeny-header-text">Cedeny.</h2></div></a>
+        <ul>
+            <li class="header-li hli1"><a href="about.html"> About </a></li>
+            <li class="header-li hli2"><a href="contact.html"> Contact </a></li>
+            <li class="header-li hli3"><a href="project.html"> Projects </a></li>
+        </ul>
+        <a href="#" class="sign-login-btn" id="signup">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Sign Up or Login
+        </a>
+
+        </nav>
+    </header>
+    <!-- <div class="alert alert-success" id="success-alert"></div>
+    <div class="alert alert-warning" id="warning-alert"></div> -->
+    <section class="signlogin" id="signin"><ion-icon name="close-outline" onclick="close()" id="closePopup" class="closePopup"></ion-icon>
+        <form id="signin-form"> 
+            <h2 class="sign-up-h2">Sign Up</h2>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <div id="password-control">
+            <input type="password" name="password" id="password-s" placeholder="Password" required>
+            <ion-icon name="eye-outline" id="look-password"></ion-icon>
+            <ion-icon name="eye-off-outline" id="dlook-password"></ion-icon></div>
+            <input type="password" name="password" id="re-password" placeholder="Confirm Password" required>
+            <button class="signin-btn" id="sign-up-btn" >Sign Up</button><br>
+            <button class="login-btn-c" id="login-btn-l">or Login</button>
+            <p id="cookies-p">Kayıt olduğunuzda <a href="cookies.html">çerezler politikası</a>nı kabul etmiş olursunuz</p>
+        </form>
+    </section>
+    <section class="signlogin login-page" id="login"><ion-icon name="close-outline" onclick="closeLogin()" id="closePopup-loginpage" class="closePopup"></ion-icon>
+        <form class="login-page-form"> 
+            <h2 class="sign-up-h2">Login</h2>
+            <input type="email" name="email" id="email-l" placeholder="Email" required>
+            <div id="login-page-password-ctrl">
+                <ion-icon name="eye-outline" id="login-page-look-password"></ion-icon>
+            <ion-icon name="eye-off-outline" id="login-page-dlook-password"></ion-icon></div>
+            <input type="password" name="password" id="password" placeholder="Password" required></div>
+            <button class="login-btn-loginpage" id="login-btn">Login</button><br>
+            <button id="logininsign" class="signin-btn-loginpage">or Sign Up</button>
+
+        </form>
+    </section>
+    <section class="first-section" id="first-section">
+        <div><h1 class="header-h" id="cedeny-header">Cedeny IT</h1></div>
+        <p class="header-text">Software, IT, Web Design, Web Development</p>
+        <a href="contact.html"><button class="contact-btn">Contact Us</button></a>
+        <!-- <img width="100%" id="firstsec-img" src="./images/1385324.png" alt="software"> -->
+    
+    </section>
+    <div class="two-sec-btw-div"></div>
+    <section class="second-section" id="second-section">
+        <div class="sec-div first-div">
+            <i class="fas fa-code"></i>
+            <h2>Code</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
+        </div>
+        <div class="sec-div second-div">
+            <i class="fab fa-buffer"></i>
+            <h2>No-code Work</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
+        
+        </div>
+        <div class="sec-div next-div">
+            <i class="fas fa-paint-brush"></i>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
+        
+        </div>
+    </section>
+    
+    <div class="cookie-consent-banner" id="cookies-banner">
+        <!-- <div class="cookie-consent-banner__inner">
+          <div class="cookie-consent-banner__copy">
+            <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
+            <div class="cookie-consent-banner__description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. You consent to our cookies if you continue to use our website.</div>
+          </div>
+      
+          <div class="cookie-consent-banner__actions">
+            <a href="#" class="cookie-consent-banner__cta" id="banner-ok">
+              OK
+            </a>
+            
+            <a href="#" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+              Decline
+            </a>
+          </div>
+        </div> -->
+        <p class="cookies-p">Cookies</p>
+        </div>
+        <footer>
+            <ul>
+                <li id="footer-li"><a href="error.html"><ion-icon name="balloon-outline"></ion-icon>&nbsp;Privacy Policy</a></li>
+                <li id="footer-li2"><a href="error.html"><ion-icon name="book-outline"></ion-icon>&nbsp;Terms & Conditions</a></li>
+                <li id="footer-li3"><a href="error.html"><ion-icon name="color-palette-outline"></ion-icon>&nbsp;Cookies Policy</a></li>
+                <li id="footer-li4"><a href="error.html"><ion-icon name="document-text-outline"></ion-icon>&nbsp;Disclaimer</a></li>
+                <li id="footer-li5"><a href="error.html"><ion-icon name="planet-outline"></ion-icon>&nbsp;EULA</a></li>
+            </ul>
+            <div class="copy-div">&copy; cedeny.com | All right reserved.</div>
+        </footer>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="animation.js"></script>
+    <script src="sign.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="banner.js"></script>
+</body>
+</html>
