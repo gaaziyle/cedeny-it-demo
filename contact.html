@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/cedeny-logo.png">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,10 @@
         <nav class="nav" id="nav">
             <a id="redirect-home" href="index.html"><div class="header-div">
         <img id="cedeny_logo" src="./images/cedeny-header.png" alt="cedeny_logo">
-            <h2 class="cedeny-header-text">Cedeny.</h2></div></a>
-        <ul>
+            <h2 class="cedeny-header-text" id="cedeny-header-text">Cedeny.</h2></div></a>
+        <ul id="pc-ul">
             <li class="header-li hli1"><a href="about.html"> About </a></li>
-            <li class="header-li hli2"><a href="contact.html" style="border-bottom: 2px solid rgb(255, 255, 255);"> Contact </a></li>
+            <li class="header-li hli2"><a href="contact.html"> Contact </a></li>
             <li class="header-li hli3"><a href="project.html"> Projects </a></li>
         </ul>
         <a href="#" class="sign-login-btn" id="signup">
@@ -34,8 +34,31 @@
             Sign Up or Login
         </a>
 
+        <div class="menu-btn" id="menu-btn">
+            <div class="menu-btn_burger" id="menu-btn_burger">
+                
+            </div>
+        </div>
         </nav>
+        <div class="menu-btn_bg" id="menu-btn_bg">
+            <div id="menu-bg-ingre">
+            <ul id="burger-menu-ul">
+                <li class="header-li"><a href="about.html"> About </a></li>
+                <li class="header-li"><a href="contact.html"> Contact </a></li>
+                <li class="header-li"><a href="project.html"> Projects </a></li>
+            </ul>
+            <a href="#" class="sign-login-btn" id="signup">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up or Login
+            </a>
+        </div>
+        </div>
+        
     </header>
+
     <section class="signlogin" id="signin"><ion-icon name="close-outline" onclick="close()" id="closePopup" class="closePopup"></ion-icon>
         <form id="signin-form"> 
             <h2 class="sign-up-h2">Sign Up</h2>
@@ -65,6 +88,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="animation.js"></script>
-
+    <script src="burger.js"></script>
+    <script src="burgerCtrl.js"></script>
 </body>
 </html>

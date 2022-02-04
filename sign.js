@@ -1,3 +1,4 @@
+// import {signup,formSignUp,close,closeLogin,seePswrd,hidePassword,seePasswordLogin,hidePasswordLogin,loginPage,loginS,backToSigninPage,change,clearStorage,showAlert,showAlertLong} from './burger'
 const signupBtn = document.getElementById('signup');
 const signin = document.getElementById('signin');
 const section = document.getElementsByTagName("section");
@@ -97,13 +98,7 @@ function closeLogin(){
     login.style.display = "none";
 
 };
-passwordInput.addEventListener('keyup',function(event){
-    if (event.getModifierState("CapsLock")) {
-        passwordInput.type = "text";
-      } else {
-        passwordInput.type = "password"
-      }
-})
+
 seePassword.addEventListener("click", seePswrd)
 
 function seePswrd(e){
