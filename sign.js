@@ -172,7 +172,7 @@ function backToSigninPage(e) {
 
 function change() {
     if (storageName.value === "") {
-        //
+        // 
     }
     else if (storageName.value === nameInput.value) {
         signupBtn.href = null;

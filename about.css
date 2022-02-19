@@ -9,6 +9,13 @@ body {
    
 
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #41cbf2;
+    border-radius: 10px;
+}
 #tick {
     margin-bottom: -4px;
     font-size: 35px;
