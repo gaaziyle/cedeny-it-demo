@@ -83,3 +83,8 @@ sr.reveal('#footer-li5', {
     origin : "left",
     delay: 700
 })
+sr.reveal('.first-section-right-content', {
+    distance : "50px",
+    origin : "right",
+    delay: 700
+})

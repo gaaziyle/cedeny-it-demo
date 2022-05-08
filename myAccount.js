@@ -165,3 +165,9 @@ function clearStorageAcc(e) {
 
     
 }
+
+
+
+
+
+document.title = storageName + " " + "| Cedeny IT";

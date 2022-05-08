@@ -38,14 +38,14 @@ function openUlDiv(){
     
     
 }
-const signupBtnBurger = document.getElementById('signup');
-const signinForm = document.getElementById('signin');
-signupBtnBurger.addEventListener("click", signupBurger);
-function signupBurger() {
-    signinForm.style.display = "grid";
+// const signupBtnBurger = document.getElementById('signup');
+// const signinForm = document.getElementById('signin');
+// signupBtnBurger.addEventListener("click", signupBurger);
+// function signupBurger(e) {
+//     signinForm.style.display = "grid";
 
-    e.preventDefault();
-};
+//     e.preventDefault();
+// };
 
 // firstSectionn.addEventListener('click',closeBurger)
 

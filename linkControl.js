@@ -1,7 +1,7 @@
-const aloginBtn  =document.getElementById('login-btn');
+// const aloginBtn  =document.getElementById('login-btn');
 
-aloginBtn.addEventListener('click', changeUrl)
+// aloginBtn.addEventListener('click', changeUrl)
 
-function changeUrl(){
-    window.history.pushState({}, "", "success")
-}
+// function changeUrl(){
+//     window.history.replaceState({}, "", "/success")
+// }

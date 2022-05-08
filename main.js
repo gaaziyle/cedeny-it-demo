@@ -21,3 +21,19 @@ window.addEventListener("scroll",function(){
 });
 
 
+var title = document.title;
+    var newTitle = "Do not forget us :)";
+
+    window.onblur = function(){
+        setTimeout(() => {
+        document.title = newTitle;
+            
+        }, 2000);
+    }
+
+    window.onfocus = function()
+    {
+        document.title = title;
+    }
+
+

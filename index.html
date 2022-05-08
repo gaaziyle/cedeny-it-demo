@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="shortcut icon" href="./images/cedeny-logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,19 +12,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-<title>Cedeny</title>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+<title>Cedeny IT </title>
 </head>
 <body>
     <div id="abc"></div>
     <header id="header">
         <nav class="nav" id="nav">
-            <a id="redirect-home"><div class="header-div">
+            <a href="https://cedeny.netlify.app/"  id="redirect-home"><div class="header-div">
         <img id="cedeny_logo" src="./images/cedeny-header.png" alt="cedeny_logo">
             <h2 class="cedeny-header-text" id="cedeny-header-text">Cedeny.</h2></div></a>
         <ul id="pc-ul">
-            <li class="header-li hli1"><a href="about.html"> About </a></li>
-            <li class="header-li hli2"><a href="contact.html"> Contact </a></li>
-            <li class="header-li hli3"><a href="project.html"> Projects </a></li>
+            <li class="header-li hli1"><a href="courses.html"> All Courses </a></li>
+            <li class="header-li hli2"><a href="contact.html"> Web Programming</a></li>
+            <li class="header-li hli3"><a href="project.html"> App Programming</a></li>
         </ul>
         <a href="#" class="sign-login-btn" id="signup">
             <span></span>
@@ -39,30 +42,31 @@
                 
             </div>
         </div>
-        </nav>
         <div class="menu-btn_bg" id="menu-btn_bg">
             <div id="menu-bg-ingre">
             <ul id="burger-menu-ul">
-                <li class="header-li"><a href="about.html"> About </a></li>
-                <li class="header-li"><a href="contact.html"> Contact </a></li>
-                <li class="header-li" id="project"><a href="project.html"> Projects </a></li>
+                <li class="header-li"><a href="courses.html"> All Courses </a></li>
+                <li class="header-li"><a href="contact.html"> Web Programming </a></li>
+                <li class="header-li" id="project"><a href="project.html"> App Programming </a></li>
             </ul>
-            <a href="#" class="sign-login-btn" id="signup">
+            <a class="sign-login-btn" id="signup">
+                <!-- <span></span>
                 <span></span>
                 <span></span>
-                <span></span>
-                <span></span>
+                <span></span> -->
                 Sign Up or Login
             </a>
         </div>
         </div>
+        </nav>
+        
         
     </header>
 
     <!-- <div class="alert alert-success" id="success-alert"></div>
     <div class="alert alert-warning" id="warning-alert">adsasd</div> -->
     <section class="signlogin" id="signin"><ion-icon name="close-outline" onclick="close()" id="closePopup" class="closePopup"></ion-icon>
-        <form id="signin-form"> 
+        <form method="post" id="signin-form" >
             <h2 class="sign-up-h2">Sign Up</h2>
             <input type="text" name="name" id="name" placeholder="Name" required>
             <input type="email" name="email" id="email" placeholder="Email" required>
@@ -70,7 +74,7 @@
             <input type="password" name="password" id="password-s" placeholder="Password" required>
             <ion-icon name="eye-outline" id="look-password"></ion-icon>
             <ion-icon name="eye-off-outline" id="dlook-password"></ion-icon></div>
-            <input type="password" name="password" id="re-password" placeholder="Confirm Password" required>
+            <input type="password" name="r-password" id="re-password" placeholder="Confirm Password" required>
             <button class="signin-btn" id="sign-up-btn" >Sign Up</button><br>
             <button class="login-btn-c" id="login-btn-l">or Login</button>
             <p id="cookies-p">Kayıt olduğunuzda <a href="cookies.html">çerezler politikası</a>nı kabul etmiş olursunuz</p>
@@ -81,41 +85,53 @@
             <h2 class="sign-up-h2">Login</h2>
             <input type="email" name="email" id="email-l" placeholder="Email" required>
             <div id="login-page-password-ctrl">
+                <ion-icon name="eye-off-outline" id="login-page-dlook-password"></ion-icon>
                 <ion-icon name="eye-outline" id="login-page-look-password"></ion-icon>
-            <ion-icon name="eye-off-outline" id="login-page-dlook-password"></ion-icon></div>
-            <input type="password" name="password" id="password" placeholder="Password" required></div>
+            </div>
+            <input type="password" name="password" id="password-login" placeholder="Password" required></div>
             <button class="login-btn-loginpage" id="login-btn">Login</button><br>
             <button id="logininsign" class="signin-btn-loginpage">or Sign Up</button>
 
         </form>
     </section>
     <section class="first-section" id="first-section">
+        <div class="first-section-texts">
         <div><h1 class="header-h" id="cedeny-header">Cedeny IT</h1></div>
-        <p class="header-text">Software, IT, Web Design, Web Development</p>
-        <a href="contact.html"><button class="contact-btn">Contact Us</button></a>
+        <p class="header-text">Get training on Web Design, website construction and information technologies</p>
+        <a href="courses.html"><button class="courses-btn">Courses</button></a>
         <!-- <img width="100%" id="firstsec-img" src="./images/1385324.png" alt="software"> -->
-    
+        </div>
+        <div class="first-section-right-content">
+            <h2 id="right-content-h2">Demo for a while</h2>
+            <p id="right-content-p">Dear user, this site is in demo for a while. Contact us for your comments and suggestions</p>
+        </div>
     </section>
     <section class="second-section" id="second-section">
         <div class="sec-div first-div">
-            <i class="fas fa-code"></i>
-            <h2>Code</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
+            <ion-icon name="code-slash-outline"></ion-icon>
+            <h2>Coding Training</h2>
+            <p>If you want to concentrate on online transactions by writing code, Cedeny IT is for you. Go to the "Courses" section to learn front-end, back-end and full-stack programming. Spend the rest of your time with coding</p>
+            <a href="courses.html"><button class="courses-btn-2">Code Courses</button></a>
         </div>
         <div class="sec-div second-div">
-            <i class="fab fa-buffer"></i>
-            <h2>No-code Work</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
-        
+            <ion-icon name="cube-outline"></ion-icon>
+            <h2>No-code Training</h2>
+            <p>No-code is a newly developing technology in the world. Your future will be enlightened with no-code programming, which has many features. To learn about no-code programming, go to the "Courses" section.</p>
+            <a href="courses.html"><button class="courses-btn-2">No-code Courses</button></a>
+            
         </div>
         <div class="sec-div next-div">
-            <i class="fas fa-paint-brush"></i>
-            <h2>Web Design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatibus cumque numquam animi odit. Repellendus, beatae illum enim consequuntur maiores quaerat ad facere quas illo earum iure laboriosam corporis minima modi quae error molestiae velit doloremque, itaque qui mollitia eius fugiat. Error soluta ab, dolorum modi dolorem velit minima eos reprehenderit perspiciatis debitis ipsum consequatur accusantium culpa maiores. Voluptas est dolores maxime tempora facere. Iste neque omnis aut minima obcaecati exercitationem sunt a voluptatibus, harum laboriosam iusto eos voluptates, vel quibusdam! Aliquam consequatur nemo similique ratione dolore laudantium natus ducimus minima voluptatibus vero aut facilis, ut quisquam praesentium inventore officia!</p>
+            <ion-icon name="brush-outline"></ion-icon>
+            <h2>APT</h2>
+            <p>Application Programming Training. Application programming is not only difficult but also enjoyable. After receiving the training, you can easily produce your own products. Visit the "Courses" section to browse the tutorials and shape your future</p>
+            <a href="courses.html"><button class="courses-btn-2">App Courses</button></a>
         
         </div>
     </section>
-    
+    <section class="interested">
+        <h2>You may be interested</h2>
+        <div class="div1"></div>
+    </section>
     <div class="cookie-consent-banner" id="cookies-banner">
         <!-- <div class="cookie-consent-banner__inner">
           <div class="cookie-consent-banner__copy">
@@ -149,6 +165,7 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="animation.js"></script>
     <script src="sign.js"></script>
+    <script src="signMobile.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="banner.js"></script>
@@ -156,6 +173,10 @@
 
 <script src="burger.js"></script>
 <script src="linkControl.js">
+
+</script>
+<script>
+    
 </script>
 </body>
 </html>

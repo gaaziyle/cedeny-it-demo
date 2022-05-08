@@ -19,7 +19,7 @@ body {
 }
 #tick {
     margin-bottom: -4px;
-    font-size: 35px;
+    font-size: 30px;
 }
 #information {
     margin-bottom: -4px;
@@ -31,7 +31,7 @@ body {
 
 .alert {
     width: 100%;
-    font-size: xx-large;
+    font-size: x-large;
     height: 7vh;
     position: fixed;
     z-index: 400;

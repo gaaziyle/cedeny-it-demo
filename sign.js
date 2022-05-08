@@ -23,7 +23,12 @@ const seePassword = document.getElementById('look-password');
 const dseePassword = document.getElementById('dlook-password');
 const loginpSeePassword = document.getElementById('login-page-look-password');
 const loginpDseePassword = document.getElementById('login-page-dlook-password');
-const loginPagePassword = document.getElementById('password');
+const loginPagePassword = document.getElementById('password-login');
+const headerText = document.getElementById("right-content-h2");
+const headerTextP = document.getElementById("right-content-p");
+
+
+
 
 
 // Storage
@@ -42,22 +47,23 @@ function signup() {
     e.preventDefault();
 };
 
+
 signinBtn.addEventListener('click',formSignUp);
 function formSignUp(e) {
     
     if (nameInput.length < 4) {
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Please enter name greater than 3 characters');
+        showAlert("warning", 'Please enter name greater than 3 characters');
     }
 
     else if (passwordInput.value !== rePasswordInput.value) {
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon>Passwords must match.');
+        showAlert("warning", 'Passwords must match.');
 
     }
     else if (passwordInput.value == '' || nameInput.value == '' || emailInput.value == '' || rePasswordInput.value == '') {
 
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Please fill in all the blanks');
+        showAlert("warning", 'Please fill in all the blanks');
 
     }
     
@@ -65,7 +71,7 @@ function formSignUp(e) {
     else if (passwordInput.value.length < 6) {
 
 
-        showAlert("warning", '<ion-icon name="alert" class="warning-alerts"></ion-icon> Password must be 6 characters or greater');
+        showAlert("warning", 'Password must be 6 characters or greater');
 
     }
     else {
@@ -73,7 +79,7 @@ function formSignUp(e) {
         localStorage.setItem('email', emailInput.value);
         localStorage.setItem('password', passwordInput.value);
         localStorage.setItem('re-password', rePasswordInput.value);
-        showAlert("success","<ion-icon name='checkmark-outline' id='tick'></ion-icon>&nbsp; Successfully registered, please login");
+        showAlert("success","Successfully registered, please login");
         setTimeout(() => {
             signin.style.display = "none";
             login.style.display = "grid";
@@ -142,20 +148,21 @@ function loginPage(e) {
     e.preventDefault();
 };
 
-buttonLoginPage.addEventListener('click',loginS)
+buttonLoginPage.addEventListener("click",loginS)
 function loginS(e) {// kontrolleri yapman lazım
+   if(passwordInput.value !== storagePassword){
+       setTimeout(() => {
+        window.location.reload()
+           
+       }, 500);
+   }
+   else{
+       setTimeout(() => {
+           window.location.reload;
+       }, 1000);
+   }
+   e.preventDefault();
     
-    if(emailL.value != storageEmail.value){
-        showAlert("warning","Böyle bir hesap bulunamadı")
-    }
-    else if(loginPagePassword.value != storagePassword.value){
-        showAlert("warning","Şifre yanlış olabilir")
-    }
-    else{
-        window.location.reload();
-    }
-    
-    e.preventDefault();
 
 };
 orSignUp.addEventListener('click',backToSigninPage)
@@ -179,6 +186,8 @@ function change() {
     }
     else {
         signupBtn.innerHTML = storageName;
+        headerText.textContent = ("Welcome" + " " + storageName)
+        headerTextP.textContent = ("Dear" + " " + storageName + "," + " " + "this site is in demo for a while. Contact us for your comments and suggestions")
         signupBtn.href = "myAccount.html";
         if (signupBtn.innerHTML == storageName) {
             signin.remove();
@@ -189,6 +198,7 @@ function change() {
 
 }
 change();
+
 
 
 clearBtn.addEventListener("click", clearStorage);
@@ -226,3 +236,4 @@ function showAlertLong(type, message) {
     }, 7000);
 
 };
+

@@ -21,7 +21,7 @@ body {
 }
 #tick {
     margin-bottom: -4px;
-    font-size: 35px;
+    font-size: 30px;
 }
 #information {
     margin-bottom: -4px;
@@ -33,7 +33,7 @@ body {
 
 .alert {
     width: 100%;
-    font-size: xx-large;
+    font-size: x-large;
     height: 7vh;
     position: fixed;
     z-index: 400;
@@ -333,6 +333,7 @@ form {
     /* margin-bottom: -80px; */
     background: rgb(22, 22, 22);
     height: 90vh;
+    z-index: 400;
 
     
 }
@@ -453,7 +454,7 @@ input:focus {
    margin-bottom: -160px;
    margin-left: auto;
    margin-right: 20px; 
-   z-index: 5;
+   z-index: 401;
    cursor: pointer;
    transition: 0.2s ease;
 }
@@ -465,9 +466,39 @@ input:focus {
     width: 100%;
     height: 120vh;
     /* background-image: url("./images/1385324.png"); */
+    display: flexs;
+
 }
-
-
+.first-section-right-content {
+    position: absolute;
+    margin-top: 300px;
+    right: 0;
+    margin-right: 7%;
+    border: 1px solid white;
+    padding: 25px;
+    background: white;
+    border-radius: 3px;
+    max-width: 500px;
+    box-shadow: 0px 0px 8px 0px white;
+}
+::-moz-selection {
+    background:white;
+    opacity: 0.5;
+    color:#41cbf2;
+}
+::selection {
+    background:white;
+    opacity: 0.5;
+    color:#41cbf2
+}
+.first-section-right-content h2{
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;}
+.first-section-right-content #right-content-p{
+    font-size: 20px;
+    font-family: sans-serif;
+    
+}
 
 .first-section div h1{
     position: absolute;
@@ -479,7 +510,7 @@ input:focus {
 
      
 }
-.first-section p {
+.first-section .header-text {
     position: absolute;
     margin-top: 390px;
     margin-left: 15%;
@@ -521,6 +552,48 @@ input:focus {
 
     
 }
+.courses-btn-2 {
+    width: 50%;
+    height: 60px;
+    margin-left: 23.5%;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid #41cbf2;
+    color: #41cbf2;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    
+}
+.courses-btn-2::before{
+    color: black;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #41cbf2;
+    z-index: 1;
+
+}
+.courses-btn-2:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+    z-index: -1;
+    color: white;
+
+
+   
+
+}
+
 
 /* @media screen and (min-width: 80vw){
     .two-sec-btw-div {
@@ -533,22 +606,25 @@ input:focus {
     font-family: 'Abel', sans-serif;
     height: 85vh;
     
+    
 
 }
 .first-div {
     width: 30%;
     text-align: justify;
-    border : 1px solid rgb(173, 173, 173);    
+    border : 1px solid rgb(173, 173, 173);   
+    height: auto;
+    padding-bottom: 16px;
 
 }
-.first-div i {
+.first-div ion-icon {
     font-size: 30px;
-    background-color: rgb(173, 173, 173);
+    background-color: white;
     border-radius: 150px;
-    padding: 21px 19px;
+    padding: 21px 21px;
     margin: 20px;
     color: black;
-    box-shadow: 0px 0px 35px 0px rgb(173, 173, 173);
+    box-shadow: 0px 0px 35px 0px rgb(225, 225, 225);
     
 }
 .first-div h2 {
@@ -563,18 +639,22 @@ input:focus {
     font-size: 20px;
 }
 .second-div {
-    background-color: rgb(173, 173, 173);
+    background-color: transparent;
+    border : 1px solid rgb(173, 173, 173);   
     width: 30%;
     text-align: justify;
+    height: auto;
+    padding-bottom: 20px;
 
 }
-.second-div i {
+.second-div ion-icon {
     font-size: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: white;
     border-radius: 150px;
-    padding: 20px 23px;
+    padding: 20px 20px;
     margin: 20px;
-    box-shadow: 0px 0px 35px 0px black;
+    color: black;
+    box-shadow: 0px 0px 35px 0px rgb(225, 225, 225);;
 
 
 }
@@ -583,43 +663,64 @@ input:focus {
     font-size: 40px;
     margin: 10px;
     text-align: center;
-    color: black;
+    color: white;
+
 }
 .second-div p{
     margin: 20px;
     font-size: 20px;
-    color: black;
+    color: white;
 
 }
 .next-div {
-    background-color: #41cbf2;
+    background-color: transparent;
     width: 30%;
     text-align: justify;
     color: white;
+    height: auto;
+    border : 1px solid rgb(173, 173, 173);   
+    padding-bottom: 20px;
+
 
 }   
-.next-div i {
-    font-size: 30px;
+.next-div ion-icon {
+    font-size: 27px;
     background-color: rgb(255, 255, 255);
     border-radius: 150px;
-    padding: 21px 19px;
+    padding: 21px 22px;
     margin: 20px;
-    box-shadow: 0px 0px 35px 0px white;
+    box-shadow: 0px 0px 35px 0px rgb(225, 225, 225);;
     color: black;
 
+}
+.next-div button {
+    margin-left: 25%;
 }
 .next-div h2 {
     font-family: 'Abel', sans-serif;
     font-size: 40px;
     margin: 10px;
     text-align: center;
+    margin-top: 0;
+
 
 }
 .next-div p{
     margin: 20px;
     font-size: 20px;
+    margin-top: -2px;
 
 }
+.interested{
+    border: 1px solid white;
+}
+.interested h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 30px;
+}
+
 .cookies-p {
     font-family: 'Abel', sans-serif;
         
@@ -807,10 +908,11 @@ input:focus {
           border-radius: 5px;
           
           
+          
       }
       .menu-btn_burger{
-          width: 30px;
-          height: 4px;
+          width: 25px;
+          height: 3px;
           background: #fff;
           border-radius: 5px;
           box-shadow: 0 2px 5px rgba(255,101,47, .2);
@@ -821,8 +923,8 @@ input:focus {
       .menu-btn_burger::after {
           content: '';
           position: absolute;
-          width: 30px;
-          height: 4px;
+          width: 25px;
+          height: 3px;
           background: #fff;
           border-radius: 5px;
           box-shadow: 0 2px 5px rgba(255,101,47,.0);
@@ -839,7 +941,7 @@ input:focus {
         background: black;
         opacity: 0.9;
         width: 100%;
-        height: 80vh;
+        height: auto;
         margin-top: -2000px;
         display: flex;
         transition: 1s ease;
@@ -849,8 +951,11 @@ input:focus {
         justify-content: center;
         
     }
-    #signup{
+    #signup-mobile{
         margin-left: 20%;
+        margin-top: -20px;
+        display: block;
+
     }
     #menu-bg-ingre {
         position: relative;
@@ -865,9 +970,11 @@ input:focus {
     #burger-menu-ul {
         display: grid;
         text-align: center;
+        margin-top: -50px;
     }
     #burger-menu-ul li {
         border-bottom: 1px solid white;
+
     }
     #burger-menu-ul li a{
         color: white;
@@ -891,7 +998,7 @@ input:focus {
           margin-top: 30px;
       }
       header nav .sign-login-btn{
-          display: none;
+          display: block;
       }
       .signlogin {
         display: none;
