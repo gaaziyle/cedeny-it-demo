@@ -185,11 +185,13 @@ function change() {
         signupBtn.href = null;
     }
     else {
-        signupBtn.innerHTML = storageName;
+            
+            signupBtn.innerHTML = "<ion-icon name='person-outline'></ion-icon>";
         headerText.textContent = ("Welcome" + " " + storageName)
         headerTextP.textContent = ("Dear" + " " + storageName + "," + " " + "this site is in demo for a while. Contact us for your comments and suggestions")
         signupBtn.href = "myAccount.html";
-        if (signupBtn.innerHTML == storageName) {
+            
+            if (signupBtn.innerHTML == '<ion-icon name="person-outline"></ion-icon>') {
             signin.remove();
         }
 
