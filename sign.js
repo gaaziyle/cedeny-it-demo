@@ -29,7 +29,13 @@ const headerTextP = document.getElementById("right-content-p");
 
 
 
+function audit(){
+    if(localStorage == null){
+        signin.style.display = "block"
 
+    }
+}
+audit();
 
 // Storage
 const storageName = localStorage.getItem('name');

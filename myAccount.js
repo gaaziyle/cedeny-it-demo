@@ -28,13 +28,16 @@ function clearBtnText(){
     clearBtnAcc.innerHTML = ("Delete"+ " " + storageEmail)
 }
 clearBtnText(); 
+
+
 function editName(e) {
     setTimeout(() => {
         editNameInput.style.display = "block";
         editNameBtn.style.display = "inline-block";
         editNameInput.value = userStorageName;
         crossInputName.style.display = "block";
-    }, 500);
+
+    }, 250);
     
     // const newInput = document.createElement('input');
     // const newButton = document.createElement("button");
@@ -46,8 +49,8 @@ function editName(e) {
     // newInput.value = userStorageName;
     // userName.appendChild(newInput)
     // userName.appendChild(newButton)
-    
     e.preventDefault();
+    
 }
 function editEmail(e) {
     setTimeout(() => {
@@ -56,7 +59,7 @@ function editEmail(e) {
         editEmailInput.value = userStorageEmail;
         crossInputEmail.style.display = "block";
 
-    }, 500);
+    }, 250);
     // const newInput = document.createElement('input');
     // const newButton = document.createElement("button");
     // newButton.innerHTML = "<ion-icon name='checkmark-outline'></ion-icon>";

@@ -449,15 +449,14 @@ input:focus {
     font-family: 'Abel', sans-serif;
 
 }
-.account-input {
+.account-input{
     background: white;
     width: 70%;
     margin-left: -1px;
     display: none;
     outline: none;
-    margin-bottom: 20px;
-    border: 1px solid red;
 }
+
 
 .edit-name-btn {
     height: 7.5vh;
