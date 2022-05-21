@@ -12,11 +12,11 @@ body {
 
 }
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 4px;
     
 }
 ::-webkit-scrollbar-thumb{
-    background: #41cbf2;
+    background: rgb(65, 203, 242);
     border-radius: 10px;
 }
 #tick {

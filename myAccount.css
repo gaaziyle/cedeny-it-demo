@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: rgb(71, 71, 71) ;
-    
+    background: rgb(56, 105, 110);
 
    
 
@@ -62,8 +61,10 @@ header {
     position: fixed;
     transition: 0.5s;
     z-index: 3;
-    background: transparent;
+    background: black;
+
 }
+
 nav{
     max-width: 1200px;
     margin-left: auto;
@@ -404,15 +405,16 @@ input:focus {
 }
 
 .account-description {
-    border: 1px solid white;
-    padding-top: 200px;
-    max-width: 1300px;
+    height: 100vh; 
+    padding: 200px 30px 30px 30px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
     color:white;
     font-size: 26px;
     font-family: 'Abel', sans-serif;
     display: grid;
+    
 
     
 }
@@ -421,13 +423,19 @@ input:focus {
     width: 50%;
 }
 #des-name {
-    
-    width: 100%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 10vh;
+    margin-bottom: -100px;
 }
 #des-email {
-    width: 100%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 10vh;
 }
 .edit-pencil {
     cursor: pointer;
@@ -448,10 +456,9 @@ input:focus {
     display: none;
     outline: none;
     margin-bottom: 20px;
+    border: 1px solid red;
 }
-#input-div {
-    margin: 20px;
-}
+
 .edit-name-btn {
     height: 7.5vh;
     background: transparent;
@@ -463,7 +470,8 @@ input:focus {
     border: 2px solid rgb(0, 163, 0);
     margin-bottom: 10px;
     cursor: pointer;
-    transition: 0.2s ease;    
+    transition: 0.2s ease;  
+
 }
 .edit-name-btn ion-icon {
     margin-bottom: -5px;
@@ -535,7 +543,8 @@ input:focus {
 }
 #clearBtn {
     width: auto; 
-    padding: 15px 10px;  
+    height: 15vh;
+    padding: 10px;
     background: transparent;
     border: 2px solid red;
     color: red;
@@ -549,6 +558,37 @@ input:focus {
 #clearBtn:hover {
     background-color: red;
     color: white;
+}
+
+@media  screen and (max-width: 500px) and (min-width: 0) {
+   
+    #redirect-home{
+        width: 40%;
+    }
+    #input-div {
+        width: 100%;
+        
+    }
+    .edit-name-btn {
+        margin-left: 0px;
+        width: 25%;
+        height: 10vh;
+    }
+    .edit-email-btn {
+        margin-left: 0px;
+        
+        width: 25%;
+        height: 10vh;
+    }
+    #cross-email-input {
+        height: 10vh;
+        margin-left: 0px;
+        
+        width: 25%;
+    }
+
+
+
 }
 
 

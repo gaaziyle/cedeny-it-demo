@@ -188,7 +188,7 @@ function change() {
             
             signupBtn.innerHTML = "<ion-icon name='person-outline'></ion-icon>";
         headerText.textContent = ("Welcome" + " " + storageName)
-        headerTextP.textContent = ("Dear" + " " + storageName + "," + " " + "this site is in demo for a while. Contact us for your comments and suggestions")
+        headerTextP.textContent = ("Dear" + " " + storageName + "," + " " + "this site has been in demo for a while in terms of content. We are developing. Contact us for your comments and suggestions")
         signupBtn.href = "myAccount.html";
             
             if (signupBtn.innerHTML == '<ion-icon name="person-outline"></ion-icon>') {
