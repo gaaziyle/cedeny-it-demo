@@ -19,9 +19,14 @@ const userStoragePassword = localStorage.getItem('password');
 const userStorageRePassword = localStorage.getItem('re-password');
 
 function change() {
-    userName.innerHTML = ("Name : " + userStorageName + "&nbsp;<button class='edit-pencil' onclick='editName()'>Edit Name</button>");
-    userEmail.innerHTML = ("Email : " + userStorageEmail + "&nbsp;<button class='edit-pencil' onclick='editEmail()'>Edit Email</button>");
+    if(userStorageName.value != "" ){
+    userName.innerHTML = ("Name : " + userStorageName + "<button class='edit-pencil' onclick='editName();'>Edit Name</button>");
+    userEmail.innerHTML = ("Email : " + userStorageEmail + "<button class='edit-pencil' onclick='editEmail()'>Edit Email</button>");
     signupBtnAcc.innerHTML = storageName;
+}
+else{
+    window.location.href = "error.html"
+}
 }
 change();
 function clearBtnText(){
@@ -30,14 +35,14 @@ function clearBtnText(){
 clearBtnText(); 
 
 
-function editName(e) {
-    setTimeout(() => {
+function editName() {
+    
         editNameInput.style.display = "block";
         editNameBtn.style.display = "inline-block";
         editNameInput.value = userStorageName;
         crossInputName.style.display = "block";
 
-    }, 250);
+    
     
     // const newInput = document.createElement('input');
     // const newButton = document.createElement("button");
@@ -49,7 +54,6 @@ function editName(e) {
     // newInput.value = userStorageName;
     // userName.appendChild(newInput)
     // userName.appendChild(newButton)
-    e.preventDefault();
     
 }
 function editEmail(e) {
