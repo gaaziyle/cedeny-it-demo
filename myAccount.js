@@ -20,7 +20,7 @@ const userStorageRePassword = localStorage.getItem('re-password');
 
 function change() {
     if(userStorageName.value != "" ){
-    userName.innerHTML = ("Name : " + userStorageName + "<button class='edit-pencil' onclick='editName();'>Edit Name</button>");
+    userName.innerHTML = ("Name : " + userStorageName + "<button class='edit-pencil' onclick='editName()'>Edit Name</button>");
     userEmail.innerHTML = ("Email : " + userStorageEmail + "<button class='edit-pencil' onclick='editEmail()'>Edit Email</button>");
     signupBtnAcc.innerHTML = storageName;
 }
@@ -35,15 +35,14 @@ function clearBtnText(){
 clearBtnText(); 
 
 
-function editName() {
-    
+function editEmail(e) {
+    setTimeout(() => {
         editNameInput.style.display = "block";
         editNameBtn.style.display = "inline-block";
-        editNameInput.value = userStorageName;
+        editNameInput.value = userStorageEmail;
         crossInputName.style.display = "block";
 
-    
-    
+    }, 250);
     // const newInput = document.createElement('input');
     // const newButton = document.createElement("button");
     // newButton.innerHTML = "<ion-icon name='checkmark-outline'></ion-icon>";
@@ -54,8 +53,9 @@ function editName() {
     // newInput.value = userStorageName;
     // userName.appendChild(newInput)
     // userName.appendChild(newButton)
-    
+    e.preventDefault();
 }
+
 function editEmail(e) {
     setTimeout(() => {
         editEmailInput.style.display = "block";

@@ -4,10 +4,9 @@ const signin = document.getElementById('signin');
 const section = document.getElementsByTagName("section");
 const loginBtnL = document.getElementById('login-btn-l');
 const login = document.getElementById('login');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password-s');
-const rePasswordInput = document.getElementById('re-password');
+// const nameInput = document.getElementById('username');
+// const emailInput = document.getElementById('email');
+// const passwordInput = document.getElementById('password');
 const clearBtn = document.getElementById('clearBtn');
 const orSignUp = document.getElementById('logininsign');
 const cross = document.getElementById('closePopup');
@@ -24,7 +23,6 @@ const dseePassword = document.getElementById('dlook-password');
 const loginpSeePassword = document.getElementById('login-page-look-password');
 const loginpDseePassword = document.getElementById('login-page-dlook-password');
 const loginPagePassword = document.getElementById('password-login');
-const headerText = document.getElementById("right-content-h2");
 const headerTextP = document.getElementById("right-content-p");
 
 
@@ -37,72 +35,44 @@ function audit(){
 }
 audit();
 
-// Storage
-const storageName = localStorage.getItem('name');
-const storageEmail = localStorage.getItem('email');
-const storagePassword = localStorage.getItem('password');
-const storageRePassword = localStorage.getItem('re-password');
 
 
 
 
 signupBtn.addEventListener("click", signup);
-function signup() {
+function signup(e) {
     signin.style.display = "grid";
-
+    document.title="Sign Up or Login";
     e.preventDefault();
 };
-
-
-signinBtn.addEventListener('click',formSignUp);
-function formSignUp(e) {
-    
-    if (nameInput.length < 4) {
-
-        showAlert("warning", 'Please enter name greater than 3 characters');
-    }
-
-    else if (passwordInput.value !== rePasswordInput.value) {
-        showAlert("warning", 'Passwords must match.');
-
-    }
-    else if (passwordInput.value == '' || nameInput.value == '' || emailInput.value == '' || rePasswordInput.value == '') {
-
-
-        showAlert("warning", 'Please fill in all the blanks');
-
-    }
-    
-
-    else if (passwordInput.value.length < 6) {
-
-
-        showAlert("warning", 'Password must be 6 characters or greater');
-
-    }
-    else {
-        localStorage.setItem('name', nameInput.value);
-        localStorage.setItem('email', emailInput.value);
-        localStorage.setItem('password', passwordInput.value);
-        localStorage.setItem('re-password', rePasswordInput.value);
-        showAlert("success","Successfully registered, please login");
-        setTimeout(() => {
-            signin.style.display = "none";
-            login.style.display = "grid";
-                
-        }, 1000);
+loginBtnL.addEventListener("click", loginPage);
+function loginPage(e) {
+    setTimeout(() => {
+        signin.style.display = "none";
+        login.style.display = "grid";
         
-
-    }
+    }, 500);
     
+    e.preventDefault();
+};
+orSignUp.addEventListener('click',backToSigninPage)
+function backToSigninPage(e) {
+    setTimeout(() => {
+        
+        signin.style.display = "grid";
+        login.style.display = "none";
+    }, 500);
+
     e.preventDefault();
 
 };
-
+    
 
 cross.addEventListener("click", close)
 function close() {
     signin.style.display = "none";
+    document.title=title;
+
     
 };
 crossLogin.addEventListener('click',closeLogin)
@@ -143,80 +113,26 @@ function hidePasswordLogin(){
 
 }
 
-loginBtnL.addEventListener("click", loginPage);
-function loginPage(e) {
-    setTimeout(() => {
-        signin.style.display = "none";
-        login.style.display = "grid";
-        
-    }, 500);
-    
-    e.preventDefault();
-};
 
-buttonLoginPage.addEventListener("click",loginS)
-function loginS(e) {// kontrolleri yapman lazım
-   if(passwordInput.value !== storagePassword){
-       setTimeout(() => {
-        window.location.reload()
+
+// buttonLoginPage.addEventListener("click",loginS)
+// function loginS(e) {// kontrolleri yapman lazım
+//    if(passwordInput.value !== storagePassword){
+//        setTimeout(() => {
+//         window.location.reload()
            
-       }, 500);
-   }
-   else{
-       setTimeout(() => {
-           window.location.reload;
-       }, 1000);
-   }
-   e.preventDefault();
+//        }, 500);
+//    }
+//    else{
+//        setTimeout(() => {
+//            window.location.reload;
+//        }, 1000);
+//    }
+//    e.preventDefault();
     
 
-};
-orSignUp.addEventListener('click',backToSigninPage)
-function backToSigninPage(e) {
-    setTimeout(() => {
-        
-        signin.style.display = "grid";
-        login.style.display = "none";
-    }, 500);
+// };
 
-    e.preventDefault();
-
-};
-
-function change() {
-    if (storageName.value === "") {
-        // 
-    }
-    else if (storageName.value === nameInput.value) {
-        signupBtn.href = null;
-    }
-    else {
-            
-            signupBtn.innerHTML = "<ion-icon name='person-outline'></ion-icon>";
-        headerText.textContent = ("Welcome" + " " + storageName)
-        headerTextP.textContent = ("Dear" + " " + storageName + "," + " " + "this site has been in demo for a while in terms of content. We are developing. Contact us for your comments and suggestions")
-        signupBtn.href = "myAccount.html";
-            
-            if (signupBtn.innerHTML == '<ion-icon name="person-outline"></ion-icon>') {
-            signin.remove();
-        }
-
-
-    }
-
-}
-change();
-
-
-
-clearBtn.addEventListener("click", clearStorage);
-
-function clearStorage() {
-    localStorage.removeItem('name');
-    localStorage.removeItem('email');
-    localStorage.removeItem('password');
-    localStorage.removeItem('re-password');
-}
 
 
 

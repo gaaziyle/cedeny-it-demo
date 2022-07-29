@@ -88,3 +88,23 @@ sr.reveal('.first-section-right-content', {
     origin : "right",
     delay: 700
 })
+sr.reveal('#click-for-oth', {
+    distance : "50px",
+    origin : "right",
+    delay: 700
+})
+sr.reveal('.next-div-first-div', {
+    distance : "50px",
+    origin : "bottom",
+    delay: 200
+})
+sr.reveal('.next-div-second-div', {
+    distance : "50px",
+    origin : "bottom",
+    delay: 400
+})
+sr.reveal('.next-div-next-div', {
+    distance : "50px",
+    origin : "bottom",
+    delay: 600
+})

@@ -482,7 +482,7 @@ nav ion-icon {
     width: 100%;
     height: 120vh;
     /* background-image: url("./images/1385324.png"); */
-    display: flexs;
+    display: flex;
 
 }
 .first-section-right-content {
@@ -567,6 +567,9 @@ nav ion-icon {
     
 
     
+}
+.first-section-texts {
+    margin-left: -20px;
 }
 .courses-btn-2 {
     width: 50%;
@@ -728,14 +731,143 @@ nav ion-icon {
 
 }
 .interested{
-    border: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 .interested h2 {
-    text-align: center;
+    text-align: left;
     color: white;
     font-family: 'Dosis', sans-serif;
     font-size: 30px;
 }
+
+#for-other-courses {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#for-other-courses button {
+    width: 100%;
+    height: 60px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 15px 20px;
+    
+}
+#for-other-courses button::before{
+    color: black;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: white;
+    z-index: 1;
+
+}
+#for-other-courses button:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+    z-index: -1;
+    color: white;
+
+
+   
+
+}
+
+#next-section {
+    margin-top: 100px;
+
+}
+.most-popular-courses{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a {
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    padding: 20px;
+    font-family: 'Rajdhani', sans-serif;    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin: 10px;
+    width: 33%;
+    transition: 0.3s ease;
+
+}
+#interested {
+    text-transform: uppercase;
+
+}
+.a:hover .most-p-btn {
+    background: white;
+    color: black; 
+    font-weight: bolder;
+}
+.a h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-bottom: 1px solid white;
+}
+.a p {
+    font-size: 20px;
+    text-align: center;
+
+}
+.a a {
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration:none;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s ease;
+}
+/* .most-p-btn:hover {
+    background-color: rgb(107, 107, 107);
+    color: black;
+    font-weight: bolder;
+} */
+
+.most-popular-courses-2{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
 
 .cookies-p {
     font-family: 'Abel', sans-serif;
@@ -843,7 +975,10 @@ nav ion-icon {
   footer{
       border-top: 1px solid white;
       color: white;
-      
+      background-repeat: no-repeat;
+      background-position: center;
+      background: linear-gradient(45deg, #002630, #000000, #002630, #000000);
+
   }
   footer ul {
       display: grid;
@@ -1050,7 +1185,7 @@ nav ion-icon {
         font-size: 26px;
     }
     #password-control {
-        display: flex;
+        display: grid;
     
     }
     #look-password {
